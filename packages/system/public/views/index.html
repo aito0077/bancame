@@ -1,0 +1,209 @@
+<section class="page__body" data-ng-controller="IndexController" data-ng-init="find()">
+	<div class="slider">
+		<ul class="slider__body">
+			<li class="slider__item">
+				<figure class="slider__image">
+					<img src="/system/assets/img/slider-home.png" alt="slider">
+				</figure>
+			</li>
+		</ul>
+	</div>
+	<div class="convocatoria" data-ng-repeat="call in calls">
+		<article class="convocatoria__body">
+			<h1 class="convocatoria__title">
+				<strong>Convocatoria Abierta</strong> - <a data-ng-href="#!/call/{{call._id}}">{{call.name}}</a>
+			</h1>
+			<p class="convocatoria__content">{{call.context}}</p>
+			<div class="convocatoria__participantes">
+				Paises participantes: Argentina, Brasil, Peru, Bolivia, Venezuela
+			</div>
+		</article>
+		<aside class="convocatoria__aside">
+			<h3 class="convocatoria__subtitle">Participá</h3>
+			<ul class="list">
+				<li class="list__item">
+					<a href="#" class="list__link">Bases y Condiciones</a>
+				</li>
+				<li class="list__item">
+					<a href="#" class="list__link">Criterios de evaluación</a>
+				</li>
+				<li class="list__item">
+					<a href="#" class="list__link">¿Otro link importante?</a>
+				</li>
+			</ul>
+			<a href="#" class="btn btn-success">Participá de la convocatoria</a>
+		</aside>
+	</div><!--/.convocatoria-->
+
+
+	<div class="etapas">
+		<h4 class="etapas__title">Etapas</h4>
+		<ul class="tabs tabs--etapas">
+			<li class="tabs__item tabs__item--active tabs__item--compartir">
+				<div class="tabs__fecha">Finalizo el 12/12/2015</div>
+				<span class="tabs__title">Compartir recursos</span>
+			</li>
+			<li class="tabs__item tabs__item--solicitar">
+				<div class="tabs__fecha">Hasta el 18/12/2015</div>
+				<span class="tabs__title">Solicitar recursos</span>
+			</li>
+			<li class="tabs__item tabs__item--evaluar">
+				<div class="tabs__fecha">Comienza el 18/12/2015</div>
+				<span class="tabs__title">Evaluación y asignación</span>
+			</li>
+			<li class="tabs__item tabs__item--impacto">
+				<div class="tabs__fecha">Comienza el 18/12/2015</div>
+				<span class="tabs__title">Medición de impacto</span>
+			</li>
+		</ul>
+	</div><!--/.etapas-->
+	<div class="indicadores">
+		<article class="indicadores__body">
+			<a href="#" class="indicadores__link">Indicadores completos</a>
+			<h2 class="indicadores__title">Indicadores de Impacto</h2>
+			<ul class="layout">
+				<li class="layout__1-4">
+					<h5 class="indicadores__item indicadores__item--left"><strong>22</strong> Proyectos participando</h5>
+				</li>
+				<li class="layout__1-4">
+					<h5 class="indicadores__item indicadores__item--left"><strong>22</strong> Recursos disponibles</h5>
+				</li>
+				<li class="layout__1-4">
+					<h5 class="indicadores__item indicadores__item--top"><strong>U$S 100.000</strong> Fondos monetarios</h5>
+				</li>
+				<li class="layout__1-4">
+					<h5 class="indicadores__item indicadores__item--top indicadores__item--small"><strong>U$S 580.000</strong> Recursos compartidos</h5>
+				</li>
+			</ul>
+			<ul class="layout">
+				<li class="layout__1-2">
+					<h5 class="indicadores__item indicadores__item--left indicadores__item--height indicadores__item--small"><strong>1200 Personas</strong> Colaborando desde</h5>
+				</li>
+				<li class="layout__1-4">
+					<h5 class="indicadores__item indicadores__item--left indicadores__item--height"><strong>7</strong> Paises participantes</h5>
+				</li>
+				<li class="layout__1-4">
+					<h5 class="indicadores__item indicadores__item--left indicadores__item--height indicadores__item--small"><strong>32</strong> Organizaciones</h5>
+				</li>
+			</ul>
+		</article>
+		<aside class="indicadores__aside">
+			<h3 class="indicadores__subtitle">Conocé nuestros mecanismos de transparencia y rendición de cuentas</h3>
+		</aside>
+	</div><!--/.indicadores-->
+	<div class="recursos">
+		<h3 class="recursos__title">Recursos disponibles</h3>
+		<p class="recursos__content">Aca va un texto que explica que es esto...</p>
+		<ul class="lista-recursos">
+			<li class="lista-recursos__item">
+				<h4 class="lista-recursos__title">Taller de prototipado rápido</h4>
+				<figure class="lista-recursos__brand">
+					<img src="/system/assets/img/brand.png" alt="brand">
+				</figure>
+				<p class="lista-recursos__content">Neti ofrece 2 días de ...</p>
+				<div class="tags">
+					<a href="tags__link">Formación</a>
+					<a href="tags__link">Espacio de trabajo</a>
+					<a href="tags__link">Argentina</a>
+				</div>
+			</li>
+			<li class="lista-recursos__item">
+				<h4 class="lista-recursos__title">Taller de prototipado rápido</h4>
+				<figure class="lista-recursos__brand">
+					<img src="/system/assets/img/brand.png" alt="brand">
+				</figure>
+				<p class="lista-recursos__content">Neti ofrece 2 días de ...</p>
+				<div class="tags">
+					<a href="tags__link">Formación</a>
+					<a href="tags__link">Espacio de trabajo</a>
+					<a href="tags__link">Argentina</a>
+				</div>
+			</li>
+			<li class="lista-recursos__item">
+				<h4 class="lista-recursos__title">Taller de prototipado rápido</h4>
+				<figure class="lista-recursos__brand">
+					<img src="/system/assets/img/brand.png" alt="brand">
+				</figure>
+				<p class="lista-recursos__content">Neti ofrece 2 días de ...</p>
+				<div class="tags">
+					<a href="tags__link">Formación</a>
+					<a href="tags__link">Espacio de trabajo</a>
+					<a href="tags__link">Argentina</a>
+				</div>
+			</li>
+			<li class="lista-recursos__item">
+				<h4 class="lista-recursos__title">Taller de prototipado rápido</h4>
+				<figure class="lista-recursos__brand">
+					<img src="/system/assets/img/brand.png" alt="brand">
+				</figure>
+				<p class="lista-recursos__content">Neti ofrece 2 días de ...</p>
+				<div class="tags">
+					<a href="tags__link">Formación</a>
+					<a href="tags__link">Espacio de trabajo</a>
+					<a href="tags__link">Argentina</a>
+				</div>
+			</li>
+			<li class="lista-recursos__item">
+				<h4 class="lista-recursos__title">Taller de prototipado rápido</h4>
+				<figure class="lista-recursos__brand">
+					<img src="/system/assets/img/brand.png" alt="brand">
+				</figure>
+				<p class="lista-recursos__content">Neti ofrece 2 días de ...</p>
+				<div class="tags">
+					<a href="tags__link">Formación</a>
+					<a href="tags__link">Espacio de trabajo</a>
+					<a href="tags__link">Argentina</a>
+				</div>
+			</li>
+			<li class="lista-recursos__item">
+				<h4 class="lista-recursos__title">Taller de prototipado rápido</h4>
+				<figure class="lista-recursos__brand">
+					<img src="/system/assets/img/brand.png" alt="brand">
+				</figure>
+				<p class="lista-recursos__content">Neti ofrece 2 días de ...</p>
+				<div class="tags">
+					<a href="tags__link">Formación</a>
+					<a href="tags__link">Espacio de trabajo</a>
+					<a href="tags__link">Argentina</a>
+				</div>
+			</li>
+			<li class="lista-recursos__item">
+				<h4 class="lista-recursos__title">Taller de prototipado rápido</h4>
+				<figure class="lista-recursos__brand">
+					<img src="/system/assets/img/brand.png" alt="brand">
+				</figure>
+				<p class="lista-recursos__content">Neti ofrece 2 días de ...</p>
+				<div class="tags">
+					<a href="tags__link">Formación</a>
+					<a href="tags__link">Espacio de trabajo</a>
+					<a href="tags__link">Argentina</a>
+				</div>
+			</li>
+			<li class="lista-recursos__item">
+				<h4 class="lista-recursos__title">Taller de prototipado rápido</h4>
+				<figure class="lista-recursos__brand">
+					<img src="/system/assets/img/brand.png" alt="brand">
+				</figure>
+				<p class="lista-recursos__content">Neti ofrece 2 días de ...</p>
+				<div class="tags">
+					<a href="tags__link">Formación</a>
+					<a href="tags__link">Espacio de trabajo</a>
+					<a href="tags__link">Argentina</a>
+				</div>
+			</li>
+		</ul>
+	</div><!--/.recursos-->
+	<div class="lista-socios">
+		<h5 class="lista-socios__">Bancame es un proyecto colaborativo de las siguientes organizaciones</h5>
+		<ul class="gallery gallery--6">
+			<li class="gallery__item">3 cols</li>
+			<li class="gallery__item">3 cols</li>
+			<li class="gallery__item">3 cols</li>
+			<li class="gallery__item">3 cols</li>
+			<li class="gallery__item">3 cols</li>
+			<li class="gallery__item">3 cols</li>
+			<li class="gallery__item">3 cols</li>
+			<li class="gallery__item">3 cols</li>
+		</ul>
+	</div>
+</section>

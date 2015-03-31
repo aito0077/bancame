@@ -1,0 +1,58 @@
+<section data-ng-controller="ResourceController" data-ng-init="findOne()">
+  <form name="resourceForm" class="form-horizontal col-md-6" role="form" data-ng-submit="update(resourceForm.$valid)" novalidate>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && resourceForm.name.$invalid }">
+      <label mean-token="'create-name'" class="col-md-3 control-label">Nombre</label>
+      <div class="col-md-9">
+        <input name="name" type="text" class="form-control" data-ng-model="resource.name" id="name" placeholder="Nombre" required>
+        <div ng-show="submitted && resourceForm.name.$invalid" class="help-block">
+          <p ng-show="resourceForm.name.$error.required">Nombre es requerido</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && resourceForm.description.$invalid }">
+      <label mean-token="'create-description'" for="description" class="col-md-3 control-label">Descripcion</label>
+      <div class="col-md-9">
+        <textarea name="description" data-ng-model="resource.description" id="description" cols="30" rows="10" placeholder="Descripcion" class="form-control" required></textarea>
+        <div ng-show="submitted && resourceForm.description.$invalid" class="help-block">
+          <p ng-show="resourceForm.description.$error.required">Descripcion es requerido</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : submitted && resourceForm.picture_path.$invalid }">
+      <label mean-token="'create-picture_path'" for="picture_path" class="col-md-3 control-label">Imagen Recurso</label>
+      <div class="col-md-9">
+            <h3>SUBIR IMAGEN</h3>
+      </div>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : submitted && resourceForm.resource_type.$invalid }">
+        <label mean-token="'create-resource_type'" class="col-md-3 control-label">Tipo de Recurso</label>
+        <div class="col-md-9">
+            <input name="resource_type" type="text" class="form-control" data-ng-model="resource.resource_type" id="resource_type" placeholder="Tipo de Recurso" required>
+            <div ng-show="submitted && resourceForm.resource_type.$invalid" class="help-block">
+                <p ng-show="resourceForm.resource_type.$error.required">Tipo de Recurso es requerido</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group" ng-class="{ 'has-error' : submitted && resourceForm.organization_owner.$invalid }">
+        <label mean-token="'create-organization_owner'" class="col-md-3 control-label">Organizacion</label>
+        <div class="col-md-9">
+            <input name="organization_owner" type="text" class="form-control" data-ng-model="resource.organization_owner" id="organization_owner" placeholder="Organizacion" required>
+            <div ng-show="submitted && resourceForm.organization_owner.$invalid" class="help-block">
+                <p ng-show="resourceForm.organization_owner.$error.required">Organizacion es requerido</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <div class="col-md-offset-3 col-md-9">
+        <button mean-token="'edit-submit'" type="submit" class="btn btn-default">Guardar</button>
+      </div>
+    </div>
+  </form>
+</section>

@@ -1,0 +1,95 @@
+@import "02objects/form/buttons";
+@import "02objects/form/checkbox";
+@import "02objects/form/inputs";
+@import "02objects/form/labels";
+@import "02objects/form/radio";
+@import "02objects/form/search_form";
+@import "02objects/form/select";
+@import "02objects/form/textarea";
+
+/* horizontal Form */
+if $use-form
+
+  button
+    button()
+    
+  /* Buttons */
+  .button
+    button(#60aae9, white)
+    &.success
+      button-skin(#aece4e, white)
+    &.danger
+      button-skin(#e77755, white)
+    &.warning
+      button-skin(#f4c84f, white)
+    &.pale
+      button-skin(#edebe8, #555555)
+    &.disabled
+      cursor: default
+      color: white
+      background-color: #aaaaaa
+
+  input[type='text'],
+  input[type='password'],
+  input[type='email'],
+  input[type="number"],
+  input[type="search"]
+    input()
+
+  label
+    label()
+
+  input[type=radio]
+    radio()
+
+  input[type=checkbox]
+    checkbox()
+
+  .search-form 
+    search_form()
+
+  select
+    select()
+
+  textarea
+    textarea()
+
+  .form
+    &__group  
+      label
+        float left
+        width 25%
+        margin-right 5%
+        text-align right
+      input[type="text"], 
+      input[type="number"], 
+      input[type="email"], 
+      input[type="password"], 
+      input[type="search"], 
+      select
+        width 50%
+      textarea  
+        width 50%
+      &--checkbox
+        margin-left 30%
+        height auto
+        label
+          text-align left 
+          width auto
+          margin-right 1em
+          display inline
+          float none
+
+  /* vertical Form */
+
+  .form--vertical
+    .form__group
+      label
+        display block
+        float none
+        width auto
+        text-align left
+      &--checkbox 
+        margin-left 0
+        label
+          display inline

@@ -1,0 +1,41 @@
+/*
+
+flash
+=====
+
+jade:
+-----
+
+.flash Este es un mensaje de notificación
+
+.flash.flash--warning Este es un mensaje de peligro
+
+.flash.flash--success Este es un mensaje de éxito
+
+.flash.flash--warning Este es un mensaje de error
+
+html:
+-----
+
+<div class="flash flash--warning">
+  Este es un mensaje de peligro
+</div>
+
+*/
+
+flash-skin($color = $noticeColor)
+  border:1px solid $color
+  color: $color
+  background: lighten($color, 80%)
+  
+if $use-flashes
+  .flash
+    padding: 15px 20px
+    margin: 1em 0
+    flash-skin()
+    &--warning
+      flash-skin($warningColor)
+    &--success
+      flash-skin($successColor)
+    &--error
+      flash-skin($errorColor)

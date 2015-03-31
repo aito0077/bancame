@@ -1,0 +1,23 @@
+<section data-ng-controller="ResourceController" data-ng-init="find()">
+    <h1>Recursos</h1>
+    <ul class="resources unstyled">
+        <li data-ng-repeat="resource in resources">
+            <span>{{resource.created | date:'medium'}}</span> /
+            <span>{{resource.user.name}}</span>
+            <h2>
+                <a data-ng-href="#!/resource/{{resource._id}}">{{resource.name}}</a>
+                <span data-ng-if="hasAuthorization(resource)">
+                    <a class="btn" href="/#!/resource/{{resource._id}}/edit">
+                        <i class="glyphicon glyphicon-edit"></i>
+                    </a>
+                    <a class="btn" data-ng-click="remove(resource);">
+                        <i class="glyphicon glyphicon-trash"></i>
+                    </a>
+                </span>
+            </h2>
+            <div>{{resource.description}}</div>
+            <div>{{resource.resource_type}}</div>
+        </li>
+    </ul>
+    <h1><a href="/#!/resource/create">Compartes uno</a>?</h1>
+</section>

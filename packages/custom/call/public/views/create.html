@@ -1,0 +1,28 @@
+<section data-ng-controller="CallController">
+  <form name="callForm" class="form-horizontal col-md-6" role="form" data-ng-submit="create(callForm.$valid)" novalidate>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && callForm.name.$invalid }">
+      <label mean-token="'create-name'" class="col-md-3 control-label">Nombre</label>
+      <div class="col-md-9">
+        <input name="name" type="text" class="form-control" data-ng-model="name" id="name" placeholder="Nombre" required>
+        <div ng-show="submitted && callForm.name.$invalid" class="help-block">
+          <p ng-show="callForm.name.$error.required">Nombre es requerido</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : submitted && callForm.context.$invalid }">
+      <label mean-token="'create-context'" for="context" class="col-md-3 control-label">Contexto</label>
+      <div class="col-md-9">
+        <textarea name="context" data-ng-model="context" id="context" cols="30" rows="10" placeholder="Contexto" class="form-control" required></textarea>
+        <div ng-show="submitted && callForm.context.$invalid" class="help-block">
+          <p ng-show="callForm.context.$error.required">Contexto es requerido</p>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-md-offset-3 col-md-9">
+        <button mean-token="'create-submit'" type="submit" class="btn btn-info">Guardar</button>
+      </div>
+    </div>
+  </form>
+</section>

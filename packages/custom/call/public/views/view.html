@@ -1,0 +1,14 @@
+<section data-ng-controller="CallController" data-ng-init="findOne()">
+  <span>{{call.created | date:'medium'}}</span> /
+  <span>{{call.user.name}}</span>
+  <h2>{{call.name}}</h2>
+  <div data-ng-if="hasAuthorization(call)">
+    <a class="btn" href="/#!/calls/{{call._id}}/edit">
+      <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn" data-ng-click="remove(call);">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <div>{{call.context}}</div>
+</section>

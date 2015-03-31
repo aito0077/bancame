@@ -1,0 +1,21 @@
+<section data-ng-controller="CallController" data-ng-init="find()">
+  <ul class="calls unstyled">
+    <li data-ng-repeat="call in calls">
+      <span>{{call.created | date:'medium'}}</span> /
+      <span>{{call.user.name}}</span>
+      <h2>
+        <a data-ng-href="#!/call/{{call._id}}">{{call.name}}</a>
+        <span data-ng-if="hasAuthorization(call)">
+          <a class="btn" href="/#!/call/{{call._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+          </a>
+          <a class="btn" data-ng-click="remove(call);">
+            <i class="glyphicon glyphicon-trash"></i>
+          </a>
+        </span>
+      </h2>
+      <div>{{call.context}}</div>
+    </li>
+  </ul>
+    <h1> <a href="/#!/call/create">Creas una</a>?</h1>
+</section>

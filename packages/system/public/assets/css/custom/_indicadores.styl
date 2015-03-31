@@ -1,0 +1,47 @@
+.indicadores
+  cf()
+  margin-bottom: 20px
+  &__body
+    column(2/3)
+    cf()
+    background: #444
+    color: #fff
+    padding: 10px
+    min-height: 180px
+    +below(3)
+      stack()
+  &__link
+    float: right
+    color: #fff
+  &__title
+    text-align: left
+    font-weight: normal
+    margin-top: 0
+  &__item
+      strong
+        font-size: 25px;
+  &__item--left
+    strong
+      float: left
+      margin-right: 20px
+      font-size: 25px;
+  &__item--top
+    strong
+      display: block
+  &__item--small
+    strong
+      font-size: 16px
+  &__item--height
+    line-height: 30px
+  &__aside
+    column(1/3)
+    padding: 10px
+    background: #444
+    color: #fff
+    min-height: 180px
+    +below(3)
+      stack()
+  &__subtitle
+    text-align: right
+    font-size: 35px
+    margin: 0

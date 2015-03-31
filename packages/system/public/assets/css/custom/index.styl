@@ -1,0 +1,56 @@
+@import '_nav'
+@import '_convocatoria'
+@import '_etapas'
+@import '_tabs'
+@import '_indicadores'
+
+.page
+  center(1280px, 15px)
+  padding: 0
+  &__body
+    margin: 0
+
+.slider
+  &__body
+    list-style-type: none
+    padding: 0
+  &__image
+    img
+      width: 100%
+      max-width: 100%    
+
+.list
+  list-style: none
+  //&__item
+  //&__link
+    
+.recursos
+  text-align: center
+  background: #eee
+  padding: 20px
+  cf()
+  
+.lista-recursos
+  margin: 0
+  list-style: none
+  &__item
+    column(1/4, cycle: 4)
+    border: 1px sollid #ccc
+    background: #fff
+    margin-bottom: 3%
+
+.lista-socios
+  &__title
+    font-size: 25px
+    font-weight: bold
+
+.layout
+  cf()
+  list-style: none
+  margin: 0
+  &__1-2
+    column(1/2)
+  &__1-4
+    column(1/4)
+  &__3-4
+    column(3/4)

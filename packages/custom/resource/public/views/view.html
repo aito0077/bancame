@@ -1,0 +1,17 @@
+<section data-ng-controller="ResourceController" data-ng-init="findOne()">
+  <span>{{resource.created | date:'medium'}}</span> /
+  <span>{{resource.user.name}}</span>
+  <h2>{{resource.name}}</h2>
+  <div data-ng-if="hasAuthorization(resource)">
+    <a class="btn" href="/#!/resources/{{resource._id}}/edit">
+      <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn" data-ng-click="remove(resource);">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <div>{{resource.description}}</div>
+  <div>{{resource.resource_type}}</div>
+  <div>{{resource.organization_owner}}</div>
+  <div>{{resource.picture_path}}</div>
+</section>

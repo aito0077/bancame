@@ -1,0 +1,74 @@
+/* 
+
+gallery 
+=======
+
+jade:
+-----
+
+ul.gallery.gallery--2
+  li.gallery__item
+    img.gallery__img(src="file_path")
+  li.gallery__item
+    img.gallery__img(src="file_path")
+  li.gallery__item
+    img.gallery__img(src="file_path")
+  li.gallery__item
+    img.gallery__img(src="file_path")
+    
+html:
+-----
+
+<ul class="gallery gallery--2">
+  <li class="gallery__item">
+    <img src="file_path" class="gallery__img">
+  </li>
+  <li class="gallery__item">
+    <img src="file_path" class="gallery__img">
+  </li>
+  <li class="gallery__item">
+    <img src="file_path" class="gallery__img">
+  </li>
+  <li class="gallery__item">
+    <img src="file_path" class="gallery__img">
+  </li>
+</div>
+
+*/
+
+gallery($column = 4, $gutter = 3)
+  .gallery__item 
+    column(1/$column, cycle: $column, gutter: $gutter )
+    margin-bottom: $gutter;
+
+if $use-gallery
+  .gallery
+    margin:0; 
+    list-style:none;
+    clearfix(); 
+    &__img
+      display: block; 
+      width:100%;
+
+  .gallery--2
+    gallery(2)
+  .gallery--3 
+    gallery(3)
+  .gallery--4 
+    gallery(4)
+  .gallery--5 
+    gallery(5)
+  .gallery--6  
+    gallery(6)
+  .gallery--7  
+    gallery(7)
+  .gallery--8  
+    gallery(8)
+  .gallery--9  
+    gallery(9)
+  .gallery--10 
+    gallery(10)
+  .gallery--11 
+    gallery(11)
+  .gallery--12 
+    gallery(12)
